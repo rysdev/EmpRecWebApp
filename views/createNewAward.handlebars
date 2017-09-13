@@ -1,0 +1,58 @@
+{{#if user}}
+
+<div class="jumbotron">
+  <h1>Create a New Award</h1>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Please fill out the fields below to create your new award.</h3>
+    </div>
+    <div class="panel-body">
+		<form id="newAward" action="/newAward" method="post">
+			<fieldset>
+
+        <label for="uid">Select User ID (required):</label>
+        <select id="uid" name="uid">
+          {{#each users}}
+            <option value={{userID}}>{{userID}} - {{fname}} {{lname}}</option>
+          {{/each}}
+        </select>
+        </br>
+        </br>
+
+        <label for="certType">Select Certificate Type (required):</label>
+        <select id="certType" name="certType">
+          {{#each type}}
+            <option value={{certID}}>{{name}}</option>
+          {{/each}}
+        </select>
+        </br>
+        </br>
+
+				<label for="timedate">Time/Date Award Was Issued:</label>
+				<input type="datetime-local" name="timedate" id="timedate">
+				<br><br>
+
+				<input type="submit" id="awardSubmit" value="Submit">
+
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+{{else}}
+  <div class="jumbotron text-center">
+    <h1>Reticulum</h1>
+    <p>Sign in</p><br>
+    <p> Or </p><br>
+    <p>Sign up and get started!</p>
+    <p>
+      <a href="/signin" class="btn btn-primary btn-lg" role="button">
+        <span class="glyphicon glyphicon-user"></span>
+       Sign in / Sign up
+      </a>
+    </p>
+  </div>
+
+{{/if}}

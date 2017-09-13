@@ -1,0 +1,38 @@
+{{#if user}}
+<div class="jumbotron">
+  <h1>Manage Awards</h1>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Issued Awards</h3>
+    </div>
+	
+      {{#each awards}}
+      <div class="panel-body">
+        <p>Award No. {{empCertID}}</p>
+        <p>Winner Name: {{fname}} {{lname}}</p>
+        <p>Award Type: {{name}}</p>
+        <p>Issue Date: {{dateAwarded}}</p>
+        <p>Issuer No. {{issuerID}}
+        <p><a href="/sendAward?sentid={{empCertID}}" class="btn btn-default btn-lg">Email Award</a></p>
+        <p><a href="/removeAward?sentid={{empCertID}}" class="btn btn-default btn-lg">Delete</a></p>
+      </div>
+      {{/each}}
+	
+</div>
+
+{{else}}
+  <div class="jumbotron text-center">
+    <h1>Reticulum</h1>
+    <p>Sign in</p><br>
+    <p> Or </p><br>
+    <p>Sign up and get started!</p>
+    <p>
+      <a href="/signin" class="btn btn-primary btn-lg" role="button">
+        <span class="glyphicon glyphicon-user"></span>
+       Sign in / Sign up
+      </a>
+    </p>
+  </div>
+
+{{/if}}
