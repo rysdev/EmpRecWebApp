@@ -2,12 +2,14 @@ Reticulum Employee Recognition Instructions
 
  
 Instructions
+
 The live deployment of this application is hosted at 
 
 ec2-54-193-66-55.us-west-1.compute.amazonaws.com
 
 
 Login
+
 When you first navigate to the site, they are greeted with a sign in/sign up screen. Click the sign in/sign up button. This brings you to a page where you can choose to either sign in with an existing account, or create a new account. Each option produces its own dropdown form; the former with fields for your email (which serves as your username) and password -- along with a login button -- and the latter with fields for your email, password, first name, last name, and region (these are used for employee profile information), as well as a register button. The region field is a dropdown menu that is populated with the available regions in which employees can be located. After either filling out the respective fields for logging in or registering, hitting the “Log In” or “Register” buttons will proceed to take you to your homepage of the regular user interface, which you will read more about below. To sign into the user interface using sample login information, enter ”bob@regular.com” and ”another”. To sign into the admin interface using sample login information, enter “rysdeveloper@gmail.com” and “admin”.
  
 Finally, back on the login screen, there is a third button for resetting your password in the event that you have a profile but cannot remember your password. Clicking this button takes you to a new page with a field in which you can enter the email address with which your profile is associated. Enter your email, click the submit button, and you are met with a new page informing you that an email has been sent to that address with a new, randomly generated temporary password, along with a button to go back to the home (sign in/sign up) page. Within a few seconds, you will receive an email from “reticulumcs467” (please check spam if you don’t see it!) saying that a change has been made to your Reticulum account. The email contains a password that you can then copy and paste into the password field while logging in, thus granting you access to the site.
@@ -15,6 +17,7 @@ Finally, back on the login screen, there is a third button for resetting your pa
 
 
 Regular User Interface
+
 This is interface is for “regular” users, i.e. employees. All newly created profiles will navigate to here. From here, you can see an image of your signature (if you have just registered, you will not see one yet; you will be able to upload a link to it from the edit profile page), as well as your full name and email. You can then choose to navigate to any of the other pages/functions available in this interface, links to which are all located in the nav bar (along with a greeting!) along the top of the screen: Home (where you currently are), Create New Award, Manage Awards, Edit Profile, and Log Out.
  
 On the Create New Award page, you will be asked to fill out three fields to issue a new award: the recipient, the award type (Employee of the Week or Employee of the Month), and the date/time it was issued. The recipient and award type can both be selected via dropdown menus, which populate with all of the available employees (regular users) and award types that are stored in the database, respectively. Once you have made selections from the dropdown menus and entered a date/time, hit “Submit,” at which point the award will be created and you will be taken back to the home screen.
@@ -28,6 +31,7 @@ This just leaves the Log Out link on the nav bar, which is self explanatory. Cli
 
 
 Admin User Interface
+
 This is our “backend” interface for admin users. Users cannot create admin profiles; they can only be generated directly in our database or by switching the isAdmin property of an existing regular user to 1 (again, an operation that is only possible when done in the database itself). As such, in order to log in, you can either do one of the aforementioned operations to create a usable admin profile, or use one of our existing ones. Ryan’s, for instance, is "rysdeveloper@gmail.com" and the password is “password” without the quotes.
  
 Once logged in, you will be brought to a nearly identical homepage to that of the regular users, with the only exception being that there is a default image for the signature since admin users don’t need signatures (they’re only used for issuing awards, which admins cannot do) and therefore cannot upload a URL for one. From here, you can navigate to the other pages/functions using the same navigation bar located at the top of the display: Home (your current location), Add/Edit/Delete Regular Users, Add/Edit/Delete Admin Users, Perform BI Operations, and Log Out.
