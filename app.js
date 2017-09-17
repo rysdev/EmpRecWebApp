@@ -17,17 +17,17 @@ var passport = require('passport'),
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host: 'sql3.freemysqlhosting.net',
-  user: 'sql3170049',
+  host: '',
+  user: '',
   port: '3306',
-  password: 'GMYiAtc2mV',
+  password: '',
   database: 'sql3170049'
 });
 
 var email   = require('emailjs');
 var server  = email.server.connect({
-   user:    "reticulumcs467@gmail.com", 
-   password:"zjoyclakyknditzr", 
+   user:    "", 
+   password:"", 
    host:    "smtp.gmail.com", 
    ssl:     true
 });
