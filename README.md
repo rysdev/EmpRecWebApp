@@ -1,7 +1,7 @@
 # EmpRecWebApp
 Employee Recognition Node.js Web App
 
-MySQL DB
+MySQL Express Node (Handlebars templating engine)
 
 This app is from a three person college project
 
