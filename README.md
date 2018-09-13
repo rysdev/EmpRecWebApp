@@ -1,7 +1,7 @@
 # EmpRecWebApp
 Application for managing an employee rewards system
 
-Supports logins for regular users and admin users. Interface and features available depend on the type of user.
+Supports logins for regular users and admin users. Interface and features available change based on the type user logged in.
 
 MySQL Express Node (Handlebars templating engine)
 
