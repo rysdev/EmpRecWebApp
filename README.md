@@ -3,7 +3,7 @@ Application for managing an employee rewards system.
 
 Supports logins for regular users and admin users. Interface and features available change based on the type user logged in.
 
-MySQL Express Node (Handlebars templating engine)
+MySQL Express.js Node.js (Handlebars templating engine)
 
 This app is from a three person college project.
 
