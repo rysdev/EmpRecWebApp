@@ -1,5 +1,5 @@
 # EmpRecWebApp
-Application for managing an employee rewards system
+Application for managing an employee rewards system.
 
 Different features for regular users and admin users.
 
